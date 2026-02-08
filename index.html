@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -781,10 +781,7 @@
           <div class="row-icon"><i class="fa-solid fa-om"></i></div>
           <div class="ik">Caste</div><div class="iv">Hindu - Kushwaha</div>
         </div>
-        <div class="irow">
-          <div class="row-icon"><i class="fa-solid fa-heart"></i></div>
-          <div class="ik">Status</div><div class="iv">Unmarried</div>
-        </div>
+
         <div class="irow">
           <div class="row-icon"><i class="fa-solid fa-language"></i></div>
           <div class="ik">Languages</div><div class="iv">Hindi, English</div>
@@ -849,15 +846,15 @@
       <div class="fam-grid">
         <div class="fcard">
           <div class="fcard-icon"><i class="fa-solid fa-star"></i></div>
-          <div class="fcard-content"><div class="fr">Grandfather</div><div class="fn">Shiv Shankar Singh</div></div>
+          <div class="fcard-content"><div class="fr">Grandfather</div><div class="fn">Shiv Shankar Singh</div><div class="fo">Farmer</div></div>
         </div>
         <div class="fcard">
-          <div class="fcard-icon"><i class="fa-solid fa-house"></i></div>
-          <div class="fcard-content"><div class="fr"></div><div class="fn"></div></div>
+          <div class="fcard-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="fcard-content"><div class="fr">Grand Mother</div><div class="fn">Shanti Devi</div></div>
         </div>
         <div class="fcard">
           <div class="fcard-icon"><i class="fa-solid fa-person"></i></div>
-          <div class="fcard-content"><div class="fr">Father</div><div class="fn">Vijay Kumar Singh</div><div class="fo"></div></div>
+          <div class="fcard-content"><div class="fr">Father</div><div class="fn">Vijay Kumar Singh</div><div class="fo">BusinessMan+Farmer</div></div>
         </div>
         <div class="fcard">
           <div class="fcard-icon"><i class="fa-solid fa-person-dress"></i></div>
@@ -909,6 +906,28 @@
   <div class="bottom-strip"></div>
 </div>
 
+
+<!-- ✔ CLICK-TO-ZOOM IMAGE MODAL (ONLY ADDITION) -->
+<div id="imgModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+  <img id="modalImg" src="" style="max-width:90%; max-height:90%; border-radius:12px;">
+</div>
+
+<script>
+  const img = document.querySelector('.avatar-inner img');
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+
+  img.style.cursor = "pointer";
+
+  img.onclick = function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+  };
+
+  modal.onclick = function () {
+      modal.style.display = "none";
+  };
+</script>
+
 </body>
 </html>
-
